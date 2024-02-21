@@ -1,0 +1,292 @@
+{
+  "tags": [
+    {
+      "title": "React",
+      "amountOfVideos": 142
+    },
+    {
+      "title": "Angular",
+      "amountOfVideos": 86
+    },
+    {
+      "title": "Vue.js",
+      "amountOfVideos": 115
+    },
+    {
+      "title": "Node.js",
+      "amountOfVideos": 199
+    },
+    {
+      "title": "Python",
+      "amountOfVideos": 257
+    },
+    {
+      "title": "Java",
+      "amountOfVideos": 303
+    },
+    {
+      "title": "JavaScript",
+      "amountOfVideos": 418
+    },
+    {
+      "title": "HTML",
+      "amountOfVideos": 156
+    },
+    {
+      "title": "CSS",
+      "amountOfVideos": 123
+    },
+    {
+      "title": "TypeScript",
+      "amountOfVideos": 92
+    },
+    {
+      "title": "C++",
+      "amountOfVideos": 179
+    },
+    {
+      "title": "C#",
+      "amountOfVideos": 204
+    },
+    {
+      "title": "PHP",
+      "amountOfVideos": 137
+    },
+    {
+      "title": "Ruby",
+      "amountOfVideos": 75
+    },
+    {
+      "title": "Swift",
+      "amountOfVideos": 96
+    },
+    {
+      "title": "Kotlin",
+      "amountOfVideos": 61
+    },
+    {
+      "title": "Go",
+      "amountOfVideos": 108
+    },
+    {
+      "title": "Rust",
+      "amountOfVideos": 53
+    },
+    {
+      "title": "SQL",
+      "amountOfVideos": 142
+    },
+    {
+      "title": "MongoDB",
+      "amountOfVideos": 89
+    },
+    {
+      "title": "SQLite",
+      "amountOfVideos": 42
+    },
+    {
+      "title": "PostgreSQL",
+      "amountOfVideos": 73
+    },
+    {
+      "title": "MySQL",
+      "amountOfVideos": 97
+    },
+    {
+      "title": "Firebase",
+      "amountOfVideos": 115
+    },
+    {
+      "title": "Docker",
+      "amountOfVideos": 128
+    },
+    {
+      "title": "Kubernetes",
+      "amountOfVideos": 81
+    },
+    {
+      "title": "AWS",
+      "amountOfVideos": 167
+    },
+    {
+      "title": "Azure",
+      "amountOfVideos": 95
+    },
+    {
+      "title": "Google Cloud",
+      "amountOfVideos": 104
+    },
+    {
+      "title": "Machine Learning",
+      "amountOfVideos": 223
+    },
+    {
+      "title": "Deep Learning",
+      "amountOfVideos": 132
+    },
+    {
+      "title": "Data Science",
+      "amountOfVideos": 187
+    },
+    {
+      "title": "Big Data",
+      "amountOfVideos": 98
+    },
+    {
+      "title": "Artificial Intelligence",
+      "amountOfVideos": 167
+    },
+    {
+      "title": "Cybersecurity",
+      "amountOfVideos": 145
+    },
+    {
+      "title": "Blockchain",
+      "amountOfVideos": 102
+    },
+    {
+      "title": "DevOps",
+      "amountOfVideos": 125
+    },
+    {
+      "title": "CI/CD",
+      "amountOfVideos": 79
+    },
+    {
+      "title": "Git",
+      "amountOfVideos": 158
+    },
+    {
+      "title": "GitHub",
+      "amountOfVideos": 114
+    },
+    {
+      "title": "Bitbucket",
+      "amountOfVideos": 62
+    },
+    {
+      "title": "Jira",
+      "amountOfVideos": 55
+    },
+    {
+      "title": "Slack",
+      "amountOfVideos": 91
+    },
+    {
+      "title": "Trello",
+      "amountOfVideos": 46
+    },
+    {
+      "title": "Zoom",
+      "amountOfVideos": 83
+    },
+    {
+      "title": "Microsoft Teams",
+      "amountOfVideos": 57
+    },
+    {
+      "title": "Web Development",
+      "amountOfVideos": 332
+    },
+    {
+      "title": "Mobile Development",
+      "amountOfVideos": 219
+    },
+    {
+      "title": "Game Development",
+      "amountOfVideos": 174
+    },
+    {
+      "title": "UI/UX Design",
+      "amountOfVideos": 136
+    },
+    {
+      "title": "Product Management",
+      "amountOfVideos": 92
+    },
+    {
+      "title": "Project Management",
+      "amountOfVideos": 78
+    },
+    {
+      "title": "Agile",
+      "amountOfVideos": 105
+    },
+    {
+      "title": "Scrum",
+      "amountOfVideos": 61
+    },
+    {
+      "title": "Lean",
+      "amountOfVideos": 43
+    },
+    {
+      "title": "Six Sigma",
+      "amountOfVideos": 29
+    },
+    {
+      "title": "Marketing",
+      "amountOfVideos": 201
+    },
+    {
+      "title": "SEO",
+      "amountOfVideos": 137
+    },
+    {
+      "title": "Social Media",
+      "amountOfVideos": 156
+    },
+    {
+      "title": "Content Creation",
+      "amountOfVideos": 89
+    },
+    {
+      "title": "Copywriting",
+      "amountOfVideos": 53
+    },
+    {
+      "title": "Graphic Design",
+      "amountOfVideos": 112
+    },
+    {
+      "title": "Video Editing",
+      "amountOfVideos": 76
+    },
+    {
+      "title": "Photography",
+      "amountOfVideos": 94
+    },
+    {
+      "title": "Illustration",
+      "amountOfVideos": 48
+    },
+    {
+      "title": "Animation",
+      "amountOfVideos": 65
+    },
+    {
+      "title": "Film Production",
+      "amountOfVideos": 57
+    },
+    {
+      "title": "Music Production",
+      "amountOfVideos": 82
+    },
+    {
+      "title": "Podcasting",
+      "amountOfVideos": 39
+    },
+    {
+      "title": "Writing",
+      "amountOfVideos": 117
+    },
+    {
+      "title": "Editing",
+      "amountOfVideos": 68
+    },
+    {
+      "title": "Publishing",
+      "amountOfVideos": 51
+    }
+  ]
+}
