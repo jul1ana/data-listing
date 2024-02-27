@@ -1,4 +1,4 @@
-import { Plus, Search, FileDown, MoreHorizontal } from "lucide-react";
+import { Plus, Search, FileDown, MoreHorizontal, Filter } from "lucide-react";
 import { Header } from "./components/header";
 import { Tabs } from "./components/tabs";
 import { Button } from "./components/ui/button";
@@ -14,6 +14,8 @@ import {
 import { Pagination } from "./components/pagination";
 import { useQuery, keepPreviousData } from "@tanstack/react-query";
 import { useSearchParams } from "react-router-dom";
+import { useState } from "react";
+// import useDebounceValue from "./hooks/use-debounce-value";
 
 export interface TagResponse {
   first: number;
@@ -32,16 +34,20 @@ export interface Tag {
 }
 
 export function App() {
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const page = searchParams.get("page") ? Number(searchParams.get("page")) : 1;
+
+  //criando um estado p/ armazenar o filtro
+  const urlFilter = searchParams.get("filter") ?? "";
+  const [filter, setFilter] = useState(urlFilter);
 
   const { data: tagsResponse, isLoading } = useQuery<TagResponse>({
     //2 parametros obrigatorios
-    queryKey: ["get-tags", page], //array onde sera passado uma identifcacao unica p/ cada requisicao feita | ["get-tags", page] -> query-key diferente p/ cada pagina
+    queryKey: ["get-tags", urlFilter, page], //array onde sera passado uma identifcacao unica p/ cada requisicao feita | ["get-tags", page] -> query-key diferente p/ cada pagina
     queryFn: async () => {
       //funcao que ira devolver os dados da api -> fetch -> fzd requisicao
       const response = await fetch(
-        `http://localhost:3333/tags?_page=${page}&_per_page=10`,
+        `http://localhost:3333/tags?_page=${page}&_per_page=10&title=${urlFilter}`,
       );
       const data = await response.json();
 
@@ -49,6 +55,17 @@ export function App() {
     },
     placeholderData: keepPreviousData, //mostra o conteudo da pagina apenas quando ja esta carregado, evita o 'pisca' da tela quando passa p/ outra pagina
   });
+
+  function handleFilter() {
+    //voltar p/ pagina 1 quando for realizar o filtro colocando o filtro na URL
+    //fzd filtro e salvando na url
+    setSearchParams((params) => {
+      params.set("page", "1");
+      params.set("filter", filter);
+
+      return params;
+    });
+  }
 
   if (isLoading) {
     return null;
@@ -71,10 +88,21 @@ export function App() {
         </div>
 
         <div className="flex items-center justify-between">
-          <Input variant="filter">
-            <Search className="size-3" />
-            <Control placeholder="Search tags..." />
-          </Input>
+          <div className="flex items-center gap-2">
+            <Input variant="filter">
+              <Search className="size-3" />
+              <Control
+                placeholder="Search tags..."
+                onChange={(e) => setFilter(e.target.value)}
+                value={filter}
+              />
+            </Input>
+
+            <Button onClick={handleFilter}>
+              <Filter className="size-3" />
+              Filter
+            </Button>
+          </div>
 
           <Button>
             <FileDown className="size-3" />
