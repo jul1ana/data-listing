@@ -12,7 +12,7 @@ import {
   TableRow,
 } from "./components/ui/table";
 import { Pagination } from "./components/pagination";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, keepPreviousData } from "@tanstack/react-query";
 import { useSearchParams } from "react-router-dom";
 
 export interface TagResponse {
@@ -37,16 +37,17 @@ export function App() {
 
   const { data: tagsResponse, isLoading } = useQuery<TagResponse>({
     //2 parametros obrigatorios
-    queryKey: ["get-tags"], //array onde sera passado uma identifcacao unica p/ cada requisicao feita
+    queryKey: ["get-tags", page], //array onde sera passado uma identifcacao unica p/ cada requisicao feita | ["get-tags", page] -> query-key diferente p/ cada pagina
     queryFn: async () => {
       //funcao que ira devolver os dados da api -> fetch -> fzd requisicao
       const response = await fetch(
-        "http://localhost:3333/tags?_page=1&_per_page=10",
+        `http://localhost:3333/tags?_page=${page}&_per_page=10`,
       );
       const data = await response.json();
 
       return data;
     },
+    placeholderData: keepPreviousData, //mostra o conteudo da pagina apenas quando ja esta carregado, evita o 'pisca' da tela quando passa p/ outra pagina
   });
 
   if (isLoading) {
